@@ -7,10 +7,10 @@ namespace MethodsClassDemo
         static void Main(string[] args)
         {
             Console.WriteLine("What is your name?");
-            string userName = Console.ReadLine();
+           string name = Console.ReadLine();
 
-            Console.WriteLine("How old are you ?");
-            string age = Console.ReadLine();
+            Console.WriteLine("what is your favorite band?");
+            string band = Console.ReadLine();
 
             Console.WriteLine("what is your favorite animal?");
             string favoriteAnimal = Console.ReadLine();
@@ -18,9 +18,9 @@ namespace MethodsClassDemo
             Console.WriteLine("what is your favorite Color?");
             string favoriteColor = Console.ReadLine();
 
-            Console.WriteLine($"There was a girl named {userName}, She was {age} years old.");
+            Console.WriteLine($"There was a girl named {name}, her favorite band is {band}.");
             Console.WriteLine($"Her favorite animals are {favoriteAnimal}, and favorite color is {favoriteColor}.");
-            Console.WriteLine($"{userName} espically loved {favoriteColor} colored {favoriteAnimal}.");
+            Console.WriteLine($"{name} espically loved {favoriteColor} colored {favoriteAnimal}.");
 
             Console.WriteLine("Give me a number to add");
             int num1 = int.Parse(Console.ReadLine());
@@ -29,37 +29,29 @@ namespace MethodsClassDemo
             int num2 = int.Parse(Console.ReadLine());
 
             int sum = Sum(num1, num2);
-            Console.WriteLine($"The sum is: {sum}");
+            Console.WriteLine($"the sum is: {sum}");
 
             Console.WriteLine("Give me a number to multiply");
-             num1 = int.Parse(Console.ReadLine());
+            num1 = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Give me a number to multiply to the first one");
-             num2 = int.Parse(Console.ReadLine());
+            num2 = int.Parse(Console.ReadLine());
 
-            int product = Multiply(num1, num2);
-            Console.WriteLine($"The product is: {product}");
-
+            int product = multiply(num1, num2);
+            Console.WriteLine($"the product is: {product}");
         }
 
-        public static int Sum(params int[] list )
-        {
-            int sum = 0;
 
-            for (int i = 0; i < list.Length; i++)
-            {
-                sum = sum + list[i];
-            }
+        public static int Sum(int num1, int num2)
+        { 
+            int sum = num1 + num2;
             return sum;
            
-            }
-
-
-
-        public static int Multiply(int x, int y)
+             
+        }
+        public static int multiply(int x, int y)
         {
-            return x * y;
-               
+            return x * y; 
         }
 
     }
